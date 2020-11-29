@@ -13,7 +13,7 @@ pipeline {
     stage('Build') {
       steps {
         script {
-          dir("C:\Users\jenkins\AppData\Local\Jenkins\.jenkins\workspace\testingpipe_main") {
+          dir("/webapp") {
             dockerImage = docker.build "${env.ARTIFACT_ID}"
           }
         }
